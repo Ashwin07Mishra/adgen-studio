@@ -1,122 +1,230 @@
 <div align="center">
 
-# AdGEN Studio
+# 🎬 AdGEN Studio
 
-### From brand brief to a checked, shootable AI ad — in one page.
+**From brand brief to a checked, shootable AI ad — in one page.**
 
-**Brand + script + product shots &rarr; storyboard sheet &rarr; Seedance video &rarr; final cut.**
-Every step rated, gated and verified before a single credit is spent.
+![LLM](https://img.shields.io/badge/LLM-Scriptwriting-green)
+![Image](https://img.shields.io/badge/Storyboard-GPT%20Image%202-orange)
+![Video](https://img.shields.io/badge/Video-Seedance%202.0-blueviolet)
+![Vision](https://img.shields.io/badge/Vision-QA%20Enabled-red)
+![Gates](https://img.shields.io/badge/Spend-Hard--Gated-critical)
+![Frontend](https://img.shields.io/badge/Frontend-Single%20Page%20App-1f4fd8)
+![Status](https://img.shields.io/badge/Status-Working%20End--to--End-success)
 
-`LLM scriptwriting` · `GPT Image 2 storyboards` · `Seedance 2.0 video` · `Vision QA` · `Hard-gated spend`
+`🧠 Script` → `🖼️ Storyboard` → `🎥 Video` → `✂️ Final Cut` — every step rated, gated and verified **before** a credit is spent.
 
 </div>
 
 ---
 
-## The problem
+## 📖 Overview
 
-Making one AI-generated ad today means juggling an LLM, an image model and a video model by hand: copy a script here, paste a prompt there, re-upload product photos, and hope the headphones still look like the headphones. Logos get garbled. A second product sneaks into the shot. The model casts a different person in every frame. And each retry costs real money.
+AdGEN Studio is an AI ad-production platform that turns a **brand profile, a short brief and your real product photos** into a finished video ad. It replaces the manual copy/paste flow between an LLM, GPT Image 2 and Seedance with one guided, five-step interface.
 
-## The answer
-
-**AdGEN Studio replaces the manual copy/paste flow between an LLM, GPT Image 2 and Seedance.** You describe the brand once, write a short brief, and the studio walks you through five gated steps — scoring and checking the work at every stage, and refusing to spend until you explicitly confirm.
+Beyond generation, AdGEN Studio **audits its own work**: scripts and prompts are scored out of 100, code-enforced rules block bad inputs, a vision model checks every storyboard and video against your product photos, and nothing paid runs without an explicit human confirmation.
 
 ---
 
-## The five-step flow
+## ⚠️ Problem Statement
 
-| # | Step | What happens |
-|---|------|--------------|
-| 1 | **Brand & product shots** | A reusable brand profile: product lock, exact product name, approved colours, casting, avoid-words and standing rules. Upload your pack shots and pick the angles to use. |
-| 2 | **Prompt → features → script** | Write the one thing only you can: the brief. The studio extracts the features to highlight and writes a timed, voice-over-ready script — rated out of 100. |
-| 3 | **Storyboard** | An engineered storyboard prompt, then a multi-panel storyboard sheet generated *from your real product photos*, followed by a vision check against those photos. |
-| 4 | **Video** | Pick a Seedance 2.0 tier and resolution. A production direction is auto-built from the script, product lock and voice note, checked, and gated behind a human approval list. |
-| 5 | **Final cut** | The generated ad lands in the page. Add real, crisp on-screen supers (rendered as true text, never AI-garbled), then run a final vision check against the photos and script. |
+Making one AI ad today means juggling three models by hand: copy a script here, paste a prompt there, re-upload photos, and hope the product still looks like the product.
 
----
+| 💥 What goes wrong | 💸 What it costs |
+|---|---|
+| Logos and product wordmarks come out garbled | A full re-render |
+| A second product sneaks into the shot | A full re-render |
+| The "talent" is a different person in every frame | A full re-render |
+| Wrong colours, invented buttons, gibberish end cards | A full re-render |
+| Someone clicks Generate one time too many | Real money |
 
-## What makes it different
-
-### Rated, explained, fixable
-Every script and prompt gets a **rating out of 100** with a full breakdown: *Fix these* and *Working*, each check named and explained. Edit by hand and **Re-check**, or hit **AI enhance** to rewrite once from the specific fixes. Nothing is ever rewritten behind your back.
-
-### Hard gates, not suggestions
-Rules are enforced by code, not left to the model's goodwill. The server **blocks paid storyboard and video calls** when a hard rule fails, unless you consciously override it. Checks include:
-
-- exact product name — any other spelling is blocked
-- approved colour palette — anything else is blocked
-- avoid-list words, checked in every script and prompt
-- product lock embedded in every prompt
-- casting description present, so the **same person** appears in every frame
-- "exactly one pair" and no-glitch clauses, to stop duplicated products and face/hand artefacts
-- sufficient product angles sent as references
-- no stray on-screen text or logos
-
-### Vision QA on the output
-After generation, a vision model inspects the **storyboard against your product photos** (panel by panel: product fidelity, garbled text, invented parts, duplicated items, casting consistency) and the **video against your photos and script** (including whether the voice-over matches). Results are advisory — you stay in charge — but defects are caught *before* you move on.
-
-### Human approval before the expensive step
-A five-point approval list must be ticked before video generation: product colour/shape/details, no wrong or added text, no invented controls, same person and wardrobe throughout, every script beat present and in order.
-
-### Two-click spend confirmation
-Paid actions **arm first**: the button turns red and reads *"SPENDS CREDITS … click again to confirm"*, then disarms on its own. Accidental spend is designed out of the interface, and the server independently requires an explicit confirmation too.
-
-### Casting that stays consistent
-A casting reference photo is passed alongside product shots so the talent keeps the same face, skin tone and wardrobe across the whole film.
-
-### Real supers, not AI typography
-On-screen text is added in post with ffmpeg as genuine text. No garbled lettering, no gibberish end cards.
-
-### Resumable by design
-Long renders are tracked as pending tasks. Close the tab, come back, reopen the ad — it resumes where it was, and results are downloaded the moment they complete.
+AdGEN Studio catches these failures **before** generation and **right after** it, instead of after the invoice.
 
 ---
 
-## Built for brands, not demos
+## ✨ Key Features
 
-- **Per-brand profiles** hold the standing rules once, so nobody retypes "don't alter the product" ever again.
-- **Past ads** are saved as runs you can reopen, inspect and iterate.
-- **Describe from photos** drafts the product-lock description straight from your pack shots, ready for you to correct.
-- **Language and voice notes** per brand for voice-over direction.
-- **Brand-safe by default:** no competitor marks, no invented claims, live-action-only unless you opt into named effects.
+### 🏷️ Brand Profiles
+- Reusable per-brand setup: **product lock**, exact product name, approved colours, casting, avoid-words and standing rules
+- Upload pack shots and choose the angles to use
+- ✨ *Describe from photos* drafts the product-lock description straight from your images
+- Language and voice-over notes per brand
+- Past ads saved as runs you can reopen and iterate
 
----
+### 📝 Rated Script Writing
+- Write only the brief; the studio extracts the **features to highlight** and writes a timed, voice-over-ready script
+- **Rating out of 100** with a full *Fix these / Working* breakdown
+- ✏️ Edit by hand and **Re-check**, or 🪄 **AI enhance** to rewrite once from the specific fixes
+- Nothing is ever rewritten behind your back
 
-## Under the hood
+### 🖼️ Photo-Faithful Storyboards
+- Engineered storyboard prompt with its own rating
+- Multi-panel sheet generated **from your real product photos** plus a casting portrait
+- Selectable quality and resolution
 
-- **Prompt engineering:** an LLM writes the script and storyboard prompt against a per-brand schema, then every output is scored by deterministic code checks plus model-judged checks.
-- **Image:** GPT Image 2 (edit mode) with product shots and a casting portrait as reference images; selectable quality and resolution.
-- **Video:** Seedance 2.0 Mini / Fast / Pro, 480p–1080p, 4–15 s, with the approved storyboard and product shots as references and optional music/sound controls.
-- **Vision QA:** a multimodal model reviews storyboards and videos against ground-truth photos.
-- **Finishing:** ffmpeg for supers and assembly.
-- **Interface:** a single-page, no-framework local web app with a stepper, colour-coded rating pills and locked-until-ready sections.
+### 🎥 Gated Video Generation
+- Seedance 2.0 **Mini / Fast / Pro**, 480p–1080p, 4–15 s
+- Production direction auto-built from the script, product lock and voice note, then checked
+- ✅ Five-point human approval list before the expensive step
 
----
+### 🔍 Vision QA
+- Storyboard checked **panel by panel** against your photos
+- Video checked against photos **and script**, including whether the voice-over matches
+- Advisory by design: you stay in charge
 
-## Proven on a real product
-
-The studio was exercised end-to-end on a premium headphone launch: a 15-second airport-to-studio film with a consistent on-screen talent, a legible product wordmark, a single correctly-rendered product in every shot, and a scripted voice-over delivered exactly as written. The process surfaced — and the gates now prevent — the classic failure modes of AI ad generation: garbled logos, wrong casting, duplicated products and face glitches.
-
----
-
-## See it in action
-
-A 64-second product tour, captured live from the working interface, walks through every step above: brand lock, the rated script, the storyboard and its vision check, the video gates and the final cut.
-
----
-
-## Status
-
-Actively developed. The pipeline is working end-to-end today; next up are longer multi-clip ads (30 s+) assembled from several Seedance clips, team login with server-side keys and spend caps, and a hosted version.
+### ✂️ Real Supers, Not AI Typography
+- On-screen text added in post as genuine text — no garbled lettering, no gibberish end cards
 
 ---
 
-## About this repository
+## 🛡️ Hard Gates (enforced by code)
 
-This repository is the public overview of AdGEN Studio. The source code is kept private. For a demo, collaboration or early access, open an issue or get in touch.
+| Gate | What it blocks |
+|---|---|
+| 🏷️ Exact product name | Any other spelling |
+| 🎨 Approved colours | Anything off-palette |
+| 🚫 Avoid-list | Banned words in any script or prompt |
+| 🔒 Product lock | Prompts missing the product description |
+| 👤 Casting | Prompts that don't pin the same person in every frame |
+| 1️⃣ One-pair / no-glitch clauses | Duplicated products, face and hand artefacts |
+| 📸 Reference angles | Too few product angles sent to the model |
+| 🔤 No stray text | Invented logos and on-screen text |
+| 💳 Spend confirm | Accidental paid generation (see below) |
+
+> The server **refuses paid storyboard and video calls** when a hard rule fails — unless you consciously override.
+
+### 💳 Two-Click Spend Confirmation
+
+```text
+[ 💳 Generate video ]  ──click──▶  [ ⚠ SPENDS CREDITS: 15 s video, Seedance 2.0 Pro 720p — click again to confirm (8 s) ]
+                                              │
+                                  second click within 8 s ──▶ generation starts
+                                  otherwise ──▶ disarms automatically
+```
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    A[🏷️ Brand Profile + Product Shots] --> B[📝 Brief]
+    B --> C[🧠 LLM: Features + Script]
+    C --> D{📊 Rating + Code Checks}
+    D -- fix --> C
+    D -- pass --> E[🖼️ Storyboard Prompt]
+    E --> F{🚦 Hard Gates}
+    F -- blocked --> E
+    F -- clear + confirm --> G[🖼️ GPT Image 2 Storyboard]
+    G --> H[🔍 Vision Check vs Photos]
+    H --> I[✅ Human Approval List]
+    I --> J{💳 Two-Click Confirm}
+    J --> K[🎥 Seedance 2.0 Video]
+    K --> L[✂️ Add Real Supers]
+    L --> M[🔍 Video Check vs Photos + Script]
+    M --> N[🎬 Final Ad]
+```
+
+---
+
+## 🔄 Workflow
+
+### Step 1 — 🏷️ Brand & Product Shots
+Set the brand once: product lock, exact name, colours, casting, avoid-words, standing rules. Upload pack shots and select the angles to use.
+
+### Step 2 — 📝 Prompt → Features → Script
+Write the brief. The studio extracts the features, writes the script, and rates it. Fix, re-check or enhance until it's right.
+
+### Step 3 — 🖼️ Storyboard
+A storyboard prompt is written and rated, then a multi-panel sheet is generated from your real photos and checked against them.
+
+### Step 4 — 🎥 Video
+Choose a Seedance tier and resolution. The direction is auto-built and checked. Tick the five-point approval list, then confirm the spend.
+
+### Step 5 — ✂️ Final Cut
+The ad lands in the page. Add supers, then run the final vision check against photos and script.
+
+---
+
+## 📊 Sample Rating Report
+
+```text
+Rating 90/100      18 of 20 checks passed
+Features highlighted:  Advanced noise cancelling · Effortless portability · All-day comfort
+
+✗ Fix these
+   claims grounded   — a claim is not in your brief
+   hook              — opener is generic; use a striking question or problem
+
+✓ Working
+   timeline · row length · VO pace · sign-off · supers · avoid list ·
+   product visible · no invented claims · voice natural · every feature shown
+```
+
+```text
+Vision check 100/100   8 of 8 passed (advisory — you still decide)
+   ✓ panel 1–6   product matches the photos, no garbled text, one pair only
+   ✓ same person across panels
+   ✓ casting matches the brief
+```
+
+---
+
+## ✅ Human Approval Before Video
+
+- [ ] Product colour, shape and details match the photos in every panel
+- [ ] No wrong, garbled or added text or logos anywhere
+- [ ] No invented buttons, controls or parts
+- [ ] Same person and wardrobe in every panel
+- [ ] Every script beat is there, in order
+
+---
+
+## 🧰 Tech Overview
+
+| Layer | Technology |
+|---|---|
+| 🧠 Scripting & prompts | Large language model with per-brand rules and scored checks |
+| 🖼️ Storyboards | GPT Image 2 (edit mode, reference images) |
+| 🎥 Video | Seedance 2.0 Mini / Fast / Pro |
+| 🔍 Vision QA | Multimodal model reviewing outputs against ground-truth photos |
+| ✂️ Finishing | ffmpeg for supers and assembly |
+| 🖥️ Interface | Single-page web app with stepper, rating pills and locked-until-ready sections |
+
+---
+
+## 🏆 Proven on a Real Product
+
+The studio was run end-to-end on a premium headphone launch: a **15-second airport-to-studio film** with consistent on-screen talent, a legible product wordmark, a single correctly-rendered product in every shot and a voice-over delivered exactly as scripted. The process surfaced — and the gates now prevent — the classic failure modes: garbled logos, wrong casting, duplicated products and face glitches.
+
+---
+
+## 🎞️ See It in Action
+
+A **64-second tour captured live from the working interface** walks through every step: brand lock, the rated script, the storyboard and its vision check, the video gates and the final cut.
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Brand profiles with product lock and casting
+- [x] Rated scripts and storyboard prompts
+- [x] Hard gates and two-click spend confirmation
+- [x] Vision QA on storyboards and videos
+- [x] Real supers and final cut
+- [x] Resumable long renders
+- [ ] Multi-clip ads (30 s+) assembled from several clips
+- [ ] Team login with server-side keys and spend caps
+- [ ] Hosted version
+
+---
+
+## 📬 About This Repository
+
+This is the public overview of AdGEN Studio. The source code is kept private. For a demo, collaboration or early access, open an issue or get in touch.
 
 <div align="center">
 
-**AdGEN Studio** — *write the brief. We'll make sure the ad is right before it costs you anything.*
+**AdGEN Studio** — *write the brief; we make sure the ad is right before it costs you anything.*
 
 </div>
