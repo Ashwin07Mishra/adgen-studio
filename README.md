@@ -8,11 +8,11 @@
 ![Image](https://img.shields.io/badge/Storyboard-GPT%20Image%202-orange)
 ![Video](https://img.shields.io/badge/Video-Seedance%202.0-blueviolet)
 ![Vision](https://img.shields.io/badge/Vision-QA%20Enabled-red)
-![Gates](https://img.shields.io/badge/Spend-Hard--Gated-critical)
+![Gates](https://img.shields.io/badge/Paid%20API-Hard--Gated-critical)
 ![Frontend](https://img.shields.io/badge/Frontend-Single%20Page%20App-1f4fd8)
 ![Status](https://img.shields.io/badge/Status-Working%20End--to--End-success)
 
-`🧠 Script` → `🖼️ Storyboard` → `🎥 Video` → `✂️ Final Cut` — every step rated, gated and verified **before** a credit is spent.
+`🧠 Script` → `🖼️ Storyboard` → `🎥 Video` → `✂️ Final Cut` — every step rated, gated and verified **before** a single paid API call is made.
 
 </div>
 
@@ -30,15 +30,15 @@ Beyond generation, AdGEN Studio **audits its own work**: scripts and prompts are
 
 Making one AI ad today means juggling three models by hand: copy a script here, paste a prompt there, re-upload photos, and hope the product still looks like the product.
 
-| 💥 What goes wrong | 💸 What it costs |
+| 💥 What goes wrong | 🔁 What it triggers |
 |---|---|
-| Logos and product wordmarks come out garbled | A full re-render |
-| A second product sneaks into the shot | A full re-render |
-| The "talent" is a different person in every frame | A full re-render |
-| Wrong colours, invented buttons, gibberish end cards | A full re-render |
-| Someone clicks Generate one time too many | Real money |
+| Logos and product wordmarks come out garbled | A full re-render (more tokens, more paid API calls) |
+| A second product sneaks into the shot | A full re-render (more tokens, more paid API calls) |
+| The "talent" is a different person in every frame | A full re-render (more tokens, more paid API calls) |
+| Wrong colours, invented buttons, gibberish end cards | A full re-render (more tokens, more paid API calls) |
+| Someone clicks Generate one time too many | Wasted paid API usage |
 
-AdGEN Studio catches these failures **before** generation and **right after** it, instead of after the invoice.
+AdGEN Studio catches these failures **before** generation and **right after** it, instead of after the token bill.
 
 ---
 
@@ -89,14 +89,14 @@ AdGEN Studio catches these failures **before** generation and **right after** it
 | 1️⃣ One-pair / no-glitch clauses | Duplicated products, face and hand artefacts |
 | 📸 Reference angles | Too few product angles sent to the model |
 | 🔤 No stray text | Invented logos and on-screen text |
-| 💳 Spend confirm | Accidental paid generation (see below) |
+| 💳 Paid API confirm | Accidental paid generation (see below) |
 
 > The server **refuses paid storyboard and video calls** when a hard rule fails — unless you consciously override.
 
-### 💳 Two-Click Spend Confirmation
+### 💳 Two-Click Paid API Confirmation
 
 ```text
-[ 💳 Generate video ]  ──click──▶  [ ⚠ SPENDS CREDITS: 15 s video, Seedance 2.0 Pro 720p — click again to confirm (8 s) ]
+[ 💳 Generate video ]  ──click──▶  [ ⚠ PAID API CALL: 15 s video, Seedance 2.0 Pro 720p — click again to confirm (8 s) ]
                                               │
                                   second click within 8 s ──▶ generation starts
                                   otherwise ──▶ disarms automatically
@@ -106,23 +106,47 @@ AdGEN Studio catches these failures **before** generation and **right after** it
 
 ## 🏗️ System Architecture
 
-```mermaid
-flowchart TD
-    A[🏷️ Brand Profile + Product Shots] --> B[📝 Brief]
-    B --> C[🧠 LLM: Features + Script]
-    C --> D{📊 Rating + Code Checks}
-    D -- fix --> C
-    D -- pass --> E[🖼️ Storyboard Prompt]
-    E --> F{🚦 Hard Gates}
-    F -- blocked --> E
-    F -- clear + confirm --> G[🖼️ GPT Image 2 Storyboard]
-    G --> H[🔍 Vision Check vs Photos]
-    H --> I[✅ Human Approval List]
-    I --> J{💳 Two-Click Confirm}
-    J --> K[🎥 Seedance 2.0 Video]
-    K --> L[✂️ Add Real Supers]
-    L --> M[🔍 Video Check vs Photos + Script]
-    M --> N[🎬 Final Ad]
+```text
+ 🏷️  Brand Profile + Product Shots
+            │
+            ▼
+ 📝  Brief  ──▶  🧠 LLM: Features + Script
+                          │
+                          ▼
+              📊 Rating + Code Checks  ◀── fix & re-check
+                          │ pass
+                          ▼
+              🖼️  Storyboard Prompt (rated)
+                          │
+                          ▼
+              🚦 Hard Gates ──── blocked ──▶ back to prompt
+                          │ clear
+                          ▼
+              💳 Paid API call, two-click confirm
+                          │
+                          ▼
+              🖼️  GPT Image 2 Storyboard Sheet
+                          │
+                          ▼
+              🔍 Vision Check vs Product Photos
+                          │
+                          ▼
+              ✅ Human Approval List (5 points)
+                          │
+                          ▼
+              💳 Paid API call, two-click confirm
+                          │
+                          ▼
+              🎥 Seedance 2.0 Video
+                          │
+                          ▼
+              ✂️  Real Supers (ffmpeg)
+                          │
+                          ▼
+              🔍 Video Check vs Photos + Script
+                          │
+                          ▼
+                     🎬 Final Ad
 ```
 
 ---
@@ -139,7 +163,7 @@ Write the brief. The studio extracts the features, writes the script, and rates 
 A storyboard prompt is written and rated, then a multi-panel sheet is generated from your real photos and checked against them.
 
 ### Step 4 — 🎥 Video
-Choose a Seedance tier and resolution. The direction is auto-built and checked. Tick the five-point approval list, then confirm the spend.
+Choose a Seedance tier and resolution. The direction is auto-built and checked. Tick the five-point approval list, then confirm the paid API call.
 
 ### Step 5 — ✂️ Final Cut
 The ad lands in the page. Add supers, then run the final vision check against photos and script.
@@ -209,12 +233,12 @@ A **64-second tour captured live from the working interface** walks through ever
 
 - [x] Brand profiles with product lock and casting
 - [x] Rated scripts and storyboard prompts
-- [x] Hard gates and two-click spend confirmation
+- [x] Hard gates and two-click paid API confirmation
 - [x] Vision QA on storyboards and videos
 - [x] Real supers and final cut
 - [x] Resumable long renders
 - [ ] Multi-clip ads (30 s+) assembled from several clips
-- [ ] Team login with server-side keys and spend caps
+- [ ] Team login with server-side keys and token-usage caps
 - [ ] Hosted version
 
 ---
@@ -225,6 +249,6 @@ This is the public overview of AdGEN Studio. The source code is kept private. Fo
 
 <div align="center">
 
-**AdGEN Studio** — *write the brief; we make sure the ad is right before it costs you anything.*
+**AdGEN Studio** — *write the brief; we make sure the ad is right before a single token is wasted.*
 
 </div>
